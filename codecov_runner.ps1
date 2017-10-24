@@ -1,0 +1,1 @@
+.\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user "-filter:+[LeetCode]* -[*Tests]*" "-excludebyattribute:*.ExcludeFromCodeCoverageAttribute" "-target:.\packages\xunit.runner.console.2.3.0\tools\net452\xunit.console.exe" "-targetargs:LeetCode.Tests.dll" "-targetdir:.\LeetCodeTests\bin\Release\"

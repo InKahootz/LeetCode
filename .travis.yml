@@ -8,4 +8,6 @@ script:
   - REPO_COMMIT_AUTHOR_EMAIL=$(git show -s --pretty=format:"%ce")
   - REPO_COMMIT_MESSAGE=$(git show -s --pretty=format:"%s")
   - mono ./packages/OpenCover.4.6.519/tools/OpenCover.Console.exe -register:user "-filter:+[LeetCode]* -[*Tests]*" "-excludebyattribute:*.ExcludeFromCodeCoverageAttribute" "-target:./packages/xunit.runner.console.2.3.0/tools/net452/xunit.console.exe" "-targetargs:LeetCode.Tests.dll" "-targetdir:./LeetCodeTests/bin/Release/"
-  - mono ./packages/Coveralls.Net.0.7.0/tools/csmacnz.Coveralls.exe --opencover -i ./results.xml --repoToken $COVERALLS_REPO_TOKEN --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitAuthor "$REPO_COMMIT_AUTHOR" --commitEmail "$REPO_COMMIT_AUTHOR_EMAIL" --commitMessage "$REPO_COMMIT_MESSAGE" --jobId $TRAVIS_JOB_ID  --serviceName "travis-ci"  --useRelativePaths
+  - mono ./packages/coveralls.net.0.7.0/tools/csmacnz.Coveralls.exe --opencover -i ./results.xml --repoToken $COVERALLS_REPO_TOKEN --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitAuthor "$REPO_COMMIT_AUTHOR" --commitEmail "$REPO_COMMIT_AUTHOR_EMAIL" --commitMessage "$REPO_COMMIT_MESSAGE" --jobId $TRAVIS_JOB_ID  --serviceName "travis-ci"  --useRelativePaths
+notifications:
+  email: false

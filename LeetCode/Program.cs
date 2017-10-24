@@ -12,7 +12,7 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            new AddTwoNumbersSolution();
+            new LongestSubstring().LengthOfLongestSubstring("dvdf");
         }
     }
 }

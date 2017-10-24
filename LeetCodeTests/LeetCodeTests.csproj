@@ -64,6 +64,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AddTwoNumbersTests.cs" />
+    <Compile Include="LongestSubstringTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
